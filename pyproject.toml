@@ -1,0 +1,15 @@
+[project]
+name = "kara"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "lerobot[feetech]>=0.4.4",
+    "mujoco>=3.6.0",
+    "numpy>=2.4.4",
+    "opencv-python>=4.13.0.92",
+    "pytest>=9.0.3",
+    "pyyaml>=6.0.3",
+    "rich>=14.3.3",
+]
