@@ -28,10 +28,10 @@ def main():
     print("\nOpening viewer. Close the window to exit.")
     with mujoco.viewer.launch_passive(model, data) as viewer:
         while viewer.is_running():
-            start_time = time.time()
+            start_time = time.perf_counter()
             mujoco.mj_step(model, data)
             viewer.sync()
-            elapsed = time.time() - start_time
+            elapsed = time.perf_counter() - start_time
 
             dt = model.opt.timestep
             sleep_time = max(0, dt - elapsed)

@@ -113,10 +113,10 @@ Run the smoke test. On macOS, use `mjpython` (not plain `python`):
 
 ```bash
 # macOS
-uv run mjpython sim/smoke_test.py
+uv run mjpython sim/smoke_check.py
 
 # Linux
-uv run python sim/smoke_test.py
+uv run python sim/smoke_check.py
 ```
 
 Expected output:
@@ -138,7 +138,7 @@ Rebuild the venv against Homebrew Python: `rm -rf .venv && uv venv
 
 **`launch_passive requires that the Python script be run under
 mjpython on macOS`.** You ran the smoke test with plain `python`
-on macOS. Use `uv run mjpython sim/smoke_test.py` instead.
+on macOS. Use `uv run mjpython sim/smoke_check.py` instead.
 
 **`No SO-101 MJCF found` / file not found error from smoke test.**
 You skipped the sparse-checkout step. Re-run the "Fetch the SO-101

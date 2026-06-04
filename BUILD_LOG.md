@@ -24,7 +24,7 @@ much longer than expected.
 - Fetched the official SO-101 MuJoCo model from TheRobotStudio's
   SO-ARM100 repo using a sparse-checkout, so only the
   Simulation/SO101 folder lives in third_party/.
-- Wrote a smoke test (sim/smoke_test.py) that loads the SO-101
+- Wrote a smoke test (sim/smoke_check.py) that loads the SO-101
   scene, prints joint names and DOF count, and opens the MuJoCo
   passive viewer.
 - Successfully ran the smoke test. The arm appeared in the viewer
