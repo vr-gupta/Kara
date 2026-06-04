@@ -6,7 +6,7 @@ hardware. Built in the open as a learning journey toward the next
 generation of intelligent physical products.
 
 ## What it does (planned)
-A small SO-101 robot arm performs benchtop manipulation tasks (e.g. - 
+A small SO-101 robot arm performs benchtop manipulation tasks (eg:
 moving small objects between physical locations) using learned policies
 trained in simulation and deployed to real hardware, orchestrated by a
 vision-language model that interprets natural-language commands.

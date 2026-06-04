@@ -27,7 +27,7 @@ Python on macOS instead:
 ```bash
 brew install python@3.11
 # Verify the shared lib exists:
-ls /opt/homebrew/opt/python@3.11/Frameworks/Python.framework/Versions/3.11/lib/libpython3.11.dylib
+ls $(brew --prefix python@3.11)/Frameworks/Python.framework/Versions/3.11/lib/libpython3.11.dylib
 ```
 
 On Linux, the distribution Python 3.11 (e.g. `apt install python3.11
@@ -60,7 +60,7 @@ its own bundled build:
 
 ```bash
 # macOS
-uv venv --python /opt/homebrew/opt/python@3.11/bin/python3.11
+uv venv --python $(brew --prefix python@3.11)/bin/python3.11
 
 # Linux
 uv venv --python $(which python3.11)
@@ -134,7 +134,7 @@ Close the viewer window to exit cleanly.
 file`.** Your venv is built against a Python that doesn't ship
 libpython as a shared lib (likely uv's bundled standalone Python).
 Rebuild the venv against Homebrew Python: `rm -rf .venv && uv venv
---python /opt/homebrew/opt/python@3.11/bin/python3.11 && uv sync`.
+--python $(brew --prefix python@3.11)/bin/python3.11 && uv sync`.
 
 **`launch_passive requires that the Python script be run under
 mjpython on macOS`.** You ran the smoke test with plain `python`

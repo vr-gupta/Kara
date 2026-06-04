@@ -991,9 +991,13 @@ dependencies = [
     { name = "mujoco" },
     { name = "numpy" },
     { name = "opencv-python" },
-    { name = "pytest" },
     { name = "pyyaml" },
     { name = "rich" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "pytest" },
 ]
 
 [package.metadata]
@@ -1002,10 +1006,11 @@ requires-dist = [
     { name = "mujoco", specifier = ">=3.6.0" },
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "opencv-python", specifier = ">=4.13.0.92" },
-    { name = "pytest", specifier = ">=9.0.3" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=9.0.3" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "rich", specifier = ">=14.3.3" },
 ]
+provides-extras = ["dev"]
 
 [[package]]
 name = "lerobot"

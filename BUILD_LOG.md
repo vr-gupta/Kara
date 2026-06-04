@@ -1,4 +1,4 @@
-# KARA Build LOG
+# KARA Build Log
 
 ## Day 0 — KARA begins (2026-04-09)
 
