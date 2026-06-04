@@ -18,7 +18,7 @@ def main():
     print(f"Loading: {SCENE}")
     model = mujoco.MjModel.from_xml_path(str(SCENE))
     data = mujoco.MjData(model)
-    print(f"Model loaded: {model.nq} DOF, {model.nbody} bodies, {model.nu} actuators")
+    print(f"Model loaded: {model.nv} DOF, {model.nbody} bodies, {model.nu} actuators")
 
     print("Joint names:")
     for i in range(model.njnt):
