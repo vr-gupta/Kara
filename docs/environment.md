@@ -43,14 +43,14 @@ virtual environments, and lockfile-based reproducibility.
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Restart your shell (or `source ~/.zshrc` / `~/.bashrc`) so `uv` is
-on your PATH.
+Restart your shell (or `source ~/.zshrc` / `source ~/.bashrc`)
+so `uv` is on your PATH.
 
 ## Clone the repo
 
 ```bash
 git clone <your-kara-repo-url>
-cd kara
+cd Kara
 ```
 
 ## Create the venv and install dependencies
