@@ -90,8 +90,8 @@ umbrella repo. We grab only that subfolder with a sparse-checkout
 so we don't clone the whole repo:
 
 ```bash
-mkdir -p sim/third_party
-cd sim/third_party
+mkdir -p assets/robots/
+cd assets/robots/
 git clone --depth 1 --filter=blob:none --sparse \
     https://github.com/TheRobotStudio/SO-ARM100.git
 cd SO-ARM100
@@ -100,7 +100,7 @@ cd ../../..
 ```
 
 You should now have
-`sim/third_party/SO-ARM100/Simulation/SO101/scene.xml` and the
+`assets/robots/SO-ARM100/Simulation/SO101/scene.xml` and the
 calibrated MJCF files alongside it.
 
 This directory is in `.gitignore` — the model is a dependency, not
@@ -113,10 +113,10 @@ Run the smoke test. On macOS, use `mjpython` (not plain `python`):
 
 ```bash
 # macOS
-uv run mjpython sim/smoke_check.py
+uv run mjpython scripts/smoke_check.py
 
 # Linux
-uv run python sim/smoke_check.py
+uv run python scripts/smoke_check.py
 ```
 
 Expected output:
@@ -138,7 +138,8 @@ Rebuild the venv against Homebrew Python: `rm -rf .venv && uv venv
 
 **`launch_passive requires that the Python script be run under
 mjpython on macOS`.** You ran the smoke test with plain `python`
-on macOS. Use `uv run mjpython sim/smoke_check.py` instead.
+on macOS. Use `uv run mjpython scripts/ts0_smoke_check.py`
+instead.
 
 **`No SO-101 MJCF found` / file not found error from smoke test.**
 You skipped the sparse-checkout step. Re-run the "Fetch the SO-101
