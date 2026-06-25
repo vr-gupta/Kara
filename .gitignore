@@ -214,7 +214,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-sim/third_party/SO-ARM100/
+assets/robots/SO-ARM100/
 
 # 3D Models
 hardware/3d_models/
