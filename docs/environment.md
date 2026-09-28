@@ -113,10 +113,10 @@ Run the smoke test. On macOS, use `mjpython` (not plain `python`):
 
 ```bash
 # macOS
-uv run mjpython scripts/smoke_check.py
+uv run mjpython scripts/ts0_smoke_check.py
 
 # Linux
-uv run python scripts/smoke_check.py
+uv run python scripts/ts0_smoke_check.py
 ```
 
 Expected output:

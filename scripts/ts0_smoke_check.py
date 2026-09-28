@@ -12,15 +12,15 @@ def smoke_test():
     Function to perform the smoke test by loading the
     SO-101 model and launching the MuJoCo viewer.
     """
-    # Load the SO-101 model and create a MuJoCo data object
-    model, data = arm_model.load_arm_model()
-    print(f"Model loaded: {model.nv} DOF, {model.nbody} bodies, {model.nu} actuators")
+    # Load the KaraArm sim model and create a MuJoCo data object
+    kara_arm = arm_model.KaraArm()
+    print(f"Model loaded: {kara_arm.model.nv} DOF, {kara_arm.model.nbody} bodies, {kara_arm.model.nu} actuators")
 
     # Print SO-101 joint information
-    arm_model.print_joint_data(model)
+    kara_arm.print_joint_data()
 
     # Launch the MuJoCo viewer to visualize the model
-    sim_viewer.launch_viewer(model, data)
+    sim_viewer.launch_viewer(kara_arm.model, kara_arm.data)
 
 
 if __name__ == "__main__":

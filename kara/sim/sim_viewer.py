@@ -8,6 +8,7 @@ the viewer with an optional callback for each simulation step.
 
 import time
 import mujoco
+import mujoco.viewer
 
 
 def launch_viewer(
@@ -25,10 +26,11 @@ def launch_viewer(
     with mujoco.viewer.launch_passive(model, data) as viewer:
         while viewer.is_running():
             start_time = time.perf_counter()
-            mujoco.mj_step(model, data)
 
             if on_step_callback is not None:
                 on_step_callback(model, data)
+
+            mujoco.mj_step(model, data)
 
             viewer.sync()
             elapsed = time.perf_counter() - start_time

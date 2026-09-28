@@ -34,7 +34,7 @@ def sweep_arm(model: mujoco.MjModel, data: mujoco.MjData) -> None:
 
 
 if __name__ == "__main__":
-    model, data = arm_model.load_arm_model()
-    arm_model.print_joint_data(model)
-    sim_viewer.launch_viewer(model, data, on_step_callback=sweep_arm)
+    kara_arm = arm_model.KaraArm()
+    kara_arm.print_joint_data()
+    sim_viewer.launch_viewer(kara_arm.model, kara_arm.data, on_step_callback=sweep_arm)
     print("Arm sweep test complete.")
