@@ -14,7 +14,7 @@ much longer than expected.
 - Started 3D printing the SO-101 frame parts (PLA on a Bambu/Prusa,
   ~30 hours of print time across the batch).
 - Created the kara repo on GitHub with a clean directory structure
-  for hardware, firmware, sim, the Python package (perception,
+  for hardware, firmware, assets, the Python package (perception,
   policy, control, telemetry, vlm), scripts, configs, and docs.
 - Set up a Python 3.11 environment with uv. Installed lerobot,
   mujoco, numpy, opencv-python, pyyaml, rich, pytest. uv pulled
@@ -24,7 +24,7 @@ much longer than expected.
 - Fetched the official SO-101 MuJoCo model from TheRobotStudio's
   SO-ARM100 repo using a sparse-checkout, so only the
   Simulation/SO101 folder lives in third_party/.
-- Wrote a smoke test (sim/smoke_check.py) that loads the SO-101
+- Wrote a smoke test (scripts/ts0_smoke_check.py) that loads the SO-101
   scene, prints joint names and DOF count, and opens the MuJoCo
   passive viewer.
 - Successfully ran the smoke test. The arm appeared in the viewer
@@ -78,10 +78,10 @@ much longer than expected.
   retry, and the mjpython detour): ~3.5 hours
 - Total: ~4.5 hours
 
-### What's next (Day 1)
+### What's next (Week 1 - Day 1)
 Make the simulated arm move under my own code. Write a script
 that sends a joint trajectory to the SO-101 in MuJoCo and moves
 it from home to a target pose and back, smoothly, while the
 viewer is running. End-of-day artifact: a 5-second video of the
 arm doing a clean sweep, committed to the repo as
-sim/scripts/day1_sweep.py.
+scripts/ts1_arm_sweep.py.

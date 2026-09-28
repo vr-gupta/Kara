@@ -21,3 +21,14 @@ testpaths = ["tests"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.19",
+]
+
+[tool.uv]
+# Use Homebrew's Python (ships libpython3.11.dylib as a shared lib),
+# which mjpython requires on macOS. uv's bundled standalone Python
+# is statically linked and breaks mjpython (libpython dlopen failure).
+python-preference = "only-system"

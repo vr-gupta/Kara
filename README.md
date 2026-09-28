@@ -25,13 +25,13 @@ Day 0: environment set up, simulation working, hardware on order.
 See `docs/environment.md` for setup. The short version:
 1. Install Homebrew Python 3.11 (macOS) or system Python 3.11 (Linux).
 2. `uv sync` to install dependencies.
-3. Clone the SO-101 sim model into `sim/third_party/` (see env doc).
-4. `uv run mjpython sim/smoke_check.py` (macOS) to verify the sim loads.
+3. Clone the SO-101 sim model into `assets/robots/` (see env doc).
+4. `uv run mjpython scripts/ts0_smoke_check.py` (macOS) to verify the sim loads.
 
 ## Structure
 - `hardware/` — CAD, BOM, wiring, build notes
 - `firmware/` — servo controller firmware
-- `sim/` — MuJoCo models, sim scripts
+- `assets/` — MuJoCo models for the robots (just SO-101 for now)
 - `kara/` — main Python package (perception, policy, control,
   telemetry, vlm)
 - `scripts/` — training, eval, demo runners
